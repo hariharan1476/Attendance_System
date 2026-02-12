@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="card">
+<h2>Attendance</h2>
+
+<form method="POST">
+
+{% for s in students %}
+<p>
+{{s.name}}
+<select name="{{s.id}}">
+<option value="Present">Present</option>
+<option value="Absent">Absent</option>
+</select>
+</p>
+{% endfor %}
+
+<button>Submit Attendance</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
